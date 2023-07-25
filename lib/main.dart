@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => CalcProvider(),
-      child:  MaterialApp(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Calculator(),
       ),
     );
