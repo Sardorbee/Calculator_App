@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:math_expressions/math_expressions.dart';
@@ -222,34 +221,15 @@ class CalcProvider with ChangeNotifier {
       }
       return null;
     }
-    // Check if the user is trying to enter a negative number after an operator
+    
     if (text.startsWith("-") && userInput.isEmpty) {
-      // Do not allow negative numbers at the beginning
       return;
     }
 
-    // Check if the user is trying to enter an operator after a negative number
     if (userInput.endsWith("-") &&
         (text == "+" || text == "*" || text == "/" || text == "=")) {
-      // Do not allow operators immediately after a negative sign
       return;
     }
-
-    // if (text.startsWith("-")) {
-    //   String? validationError = validateNumber(text.substring(1));
-    //   if (validationError != null) {
-    //     // Show an error message or handle the error in some way
-
-    //     return;
-    //   }
-    // } else {
-    //   // String? validationError = validateNumber(text);
-    //   // if (validationError != null) {
-    //   //   // Show an error message or handle the error in some way
-    //   //   showAlertDialog();
-    //   //   return;
-    //   // }
-    // }
 
     if (text == "=") {
       result = calculate();

@@ -6,7 +6,7 @@ Widget makedButton(String text) {
   return Consumer<CalcProvider>(
     builder: (context, x, child) {
       return InkWell(
-        splashColor: Color.fromARGB(255, 70, 97, 109),
+        splashColor: const Color.fromARGB(255, 70, 97, 109),
         onTap: () {
           x.h(text, context);
         },
@@ -16,7 +16,7 @@ Widget makedButton(String text) {
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
-                color: Color.fromARGB(255, 0, 0, 0).withOpacity(0.6),
+                color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.6),
                 blurRadius: 4,
                 spreadRadius: 0.5,
                 offset: const Offset(-3, -3),
@@ -30,11 +30,11 @@ Widget makedButton(String text) {
                 color: x.getColor(text),
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
-              ), // TextStyle
-            ), // Text
-          ), // Center
-        ), // Ink
+              ), 
+            ), 
+          ), 
+        ), 
       );
     },
-  ); // InkWell
+  ); 
 }

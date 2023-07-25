@@ -6,11 +6,10 @@ import 'package:provider/provider.dart';
 
 // ignore: must_be_immutable
 class Calculator extends StatelessWidget {
-   Calculator({super.key});
+  Calculator({super.key});
 
   TextEditingController a = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-
 
   List<String> buttonList = [
     "AC",
@@ -38,7 +37,7 @@ class Calculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 151, 174, 199),
+      backgroundColor: const Color.fromARGB(255, 151, 174, 199),
       body: Column(children: [
         SizedBox(
           height: MediaQuery.of(context).size.height / 3,
@@ -53,17 +52,15 @@ class Calculator extends StatelessWidget {
                       a.text = x.userInput;
                       return Form(
                         key: _formKey,
-                        
                         child: TextFormField(
-
                           validator: x.validateNumber,
-                          decoration: InputDecoration(border: InputBorder.none),
+                          decoration:
+                              const InputDecoration(border: InputBorder.none),
                           readOnly: true,
                           inputFormatters: [
                             // FilteringTextInputFormatter.digitsOnly
                             FilteringTextInputFormatter.allow(
-                              RegExp(
-                                  r'^\d{0,5}'), // Allow up to 5 digits (100000)
+                              RegExp(r'^\d{0,5}'),
                             ),
                           ],
                           controller: a,
@@ -107,12 +104,11 @@ class Calculator extends StatelessWidget {
               ),
               itemBuilder: (BuildContext context, int index) {
                 return makedButton(buttonList[index]);
-              }, // itemBuilder
-            ), // GridView.builder
-          ), // Container
-        ),
-      ] // Expanded
+              },
+            ),
           ),
-    ); // Column
+        ),
+      ]),
+    );
   }
 }
