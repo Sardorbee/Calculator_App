@@ -102,11 +102,11 @@ class Calculator extends StatelessWidget {
               itemCount: buttonList.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 4,
-                crossAxisSpacing: 12,
-                mainAxisSpacing: 12,
+                crossAxisSpacing: 18,
+                mainAxisSpacing: 18,
               ),
               itemBuilder: (BuildContext context, int index) {
-                return customButton(buttonList[index]);
+                return makedButton(buttonList[index]);
               }, // itemBuilder
             ), // GridView.builder
           ), // Container

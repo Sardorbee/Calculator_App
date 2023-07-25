@@ -2,11 +2,11 @@ import 'package:calc_provider/provider/calcprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-Widget customButton(String text) {
+Widget makedButton(String text) {
   return Consumer<CalcProvider>(
     builder: (context, x, child) {
       return InkWell(
-        splashColor: const Color(0xFF1d2630),
+        splashColor: Color.fromARGB(255, 70, 97, 109),
         onTap: () {
           x.h(text, context);
         },
@@ -16,7 +16,7 @@ Widget customButton(String text) {
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
-                color: Colors.white.withOpacity(0.1),
+                color: Color.fromARGB(255, 0, 0, 0).withOpacity(0.6),
                 blurRadius: 4,
                 spreadRadius: 0.5,
                 offset: const Offset(-3, -3),
