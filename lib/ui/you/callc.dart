@@ -11,28 +11,6 @@ class Calculator extends StatelessWidget {
   TextEditingController a = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
-  List<String> buttonList = [
-    "AC",
-    "MA",
-    "MG",
-    "/",
-    "7",
-    "8",
-    "9",
-    "*",
-    "4",
-    "5",
-    "6",
-    "+",
-    "1",
-    "2",
-    "3",
-    "-",
-    "Clear",
-    "0",
-    ".",
-    "=",
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -112,3 +90,26 @@ class Calculator extends StatelessWidget {
     );
   }
 }
+
+List<String> buttonList = [
+  "AC",
+  "MA",
+  "MG",
+  "/",
+  "7",
+  "8",
+  "9",
+  "*",
+  "4",
+  "5",
+  "6",
+  "+",
+  "1",
+  "2",
+  "3",
+  "-",
+  "Clear",
+  "0",
+  ".",
+  "=",
+];
